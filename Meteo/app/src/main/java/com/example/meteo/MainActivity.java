@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodManager;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.recherche, menu);
         MenuItem menuItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
+        Log.d("aaaaa", "" + (searchView == null));
         searchView.setQueryHint("Écrire le nom de la ville");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
 
